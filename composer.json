@@ -1,0 +1,39 @@
+{
+    "name": "joshuaestes/google-bundle",
+    "type": "symfony-bundle",
+    "description": "Provides access to many google services",
+    "keywords": ["google"],
+    "homepage": "https://github.com/JoshuaEstes/GoogleBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joshua Estes",
+            "email": "Joshua@Estes.in",
+            "homepage": "http://joshuaestes.me",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/JoshuaEstes/GoogleBundle/issues",
+        "wiki": "https://github.com/JoshuaEstes/GoogleBundle/wiki",
+        "source": "https://github.com/JoshuaEstes/GoogleBundle"
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "google/apiclient": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": { "JoshuaEstes\\Bundle\\GoogleBundle": "" }
+    },
+    "config": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    },
+    "archive": {
+        "exclude": ["vendor","composer.lock","composer.phar"]
+    }
+}
