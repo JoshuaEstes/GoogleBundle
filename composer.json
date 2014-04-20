@@ -20,10 +20,9 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "google/apiclient": "*"
+        "google/apiclient": "~1.0@dev"
     },
     "require-dev": {
-        "phpunit/phpunit": "*"
     },
     "autoload": {
         "psr-4": { "JoshuaEstes\\Bundle\\GoogleBundle\\": "" }

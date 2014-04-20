@@ -1,11 +1,18 @@
 JoshuaEstesGoogleBundle
 =======================
 
+This bundle gives you access to most of the Google API's. If you do not
+already have a developers key, you will need to create one.
+
+[Click here to create keys](https://console.developers.google.com/)
+
 # Documentation
+
+You can read all of the documentation in the `Resources/doc` directory.
 
 [Resources/doc/index.markdown](https://github.com/JoshuaEstes/GoogleBundle/blob/master/Resources/doc/index.markdown)
 
-# License
+# License [MIT]
 
 [Resources/meta/LICENSE](https://github.com/JoshuaEstes/GoogleBundle/blob/master/Resources/meta/LICENSE)
 
