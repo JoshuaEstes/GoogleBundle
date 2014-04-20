@@ -20,13 +20,13 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "google/apiclient": "dev-master"
+        "google/apiclient": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
     },
     "autoload": {
-        "psr-4": { "JoshuaEstes\\Bundle\\GoogleBundle": "" }
+        "psr-4": { "JoshuaEstes\\Bundle\\GoogleBundle\\": "" }
     },
     "config": {
         "branch-alias": {
