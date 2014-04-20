@@ -13,6 +13,13 @@ class JoshuaEstesGoogleExtension extends Extension
     {
         $config = $this->processConfiguration(new Configuration(), $configs);
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        //$loader->load('services.xml');
+        $loader->load('services.xml');
+
+        $container->setParameter('joshuaestes_google.developer_key', $config['developer_key']);
+    }
+
+    public function getAlias()
+    {
+        return 'joshuaestes_google';
     }
 }

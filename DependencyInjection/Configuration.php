@@ -13,6 +13,14 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode    = $treeBuilder->root('joshuaestes_google');
 
+        $rootNode
+            ->children()
+                ->scalarNode('developer_key')
+                    ->isRequired()
+                    ->defaultNull()
+                ->end()
+            ->end();
+
         return $treeBuilder;
     }
 }

@@ -1,0 +1,78 @@
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="joshuaestes_google.client.class">Google_Client</parameter>
+    </parameters>
+
+    <services>
+        <service id="joshuaestes_google.client" class="%joshuaestes_google.client.class%" public="false">
+            <call method="setApplicationName">
+                <argument>JoshuaEstesGoogleBundle</argument>
+            </call>
+            <call method="setDeveloperKey">
+                <argument>%joshuaestes_google.developer_key%</argument>
+            </call>
+        </service>
+
+        <service id="joshuaestes_google.service" abstract="true">
+            <argument type="service" id="joshuaestes_google.client" />
+        </service>
+
+        <service id="joshuaestes_google.service.ad_exchange_buyer" class="Google_Service_AdExchangeBuyer" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.ad_exchange_seller" class="Google_Service_AdExchangeSeller" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.adsense" class="Google_Service_AdSense" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.adsense_host" class="Google_Service_AdSenseHost" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.admin" class="Google_Service_Admin" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.analytics" class="Google_Service_Analytics" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.android_publisher" class="Google_Service_AndroidPublisher" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.app_state" class="Google_Service_AppState" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.audit" class="Google_Service_Audit" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.bigquery" class="Google_Service_Bigquery" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.blogger" class="Google_Service_Blogger" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.books" class="Google_Service_Books" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.calendar" class="Google_Service_Calendar" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.civic_info" class="Google_Service_CivicInfo" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.compute" class="Google_Service_Compute" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.coordinate" class="Google_Service_Coordinate" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.customsearch" class="Google_Service_Customsearch" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.datastore" class="Google_Service_Datastore" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.dfareporting" class="Google_Service_Dfareporting" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.directory" class="Google_Service_Directory" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.dns" class="Google_Service_Dns" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.double_click_bid_manager" class="Google_Service_DoubleClickBidManager" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.double_click_search" class="Google_Service_Doubleclicksearch" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.drive" class="Google_Service_Drive" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.freebase" class="Google_Service_Freebase" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.fusiontables" class="Google_Service_Fusiontables" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.games" class="Google_Service_Games" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.games_management" class="Google_Service_GamesManagement" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.groups_migration" class="Google_Service_GroupsMigration" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.groupsettings" class="Google_Service_Groupssettings" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.identity_toolkit" class="Google_Service_IdentityToolkit" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.licensing" class="Google_Service_Licensing" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.maps_engine" class="Google_Service_MapsEngine" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.mirror" class="Google_Service_Mirror" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.oauth2" class="Google_Service_Oauth2" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.orkut" class="Google_Service_Orkut" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.pagespeedonline" class="Google_Service_Pagespeedonline" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.plus" class="Google_Service_Plus" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.plus_domains" class="Google_Service_PlusDomains" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.prediction" class="Google_Service_Prediction" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.qpx_express" class="Google_Service_QPXExpress" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.reports" class="Google_Service_Reports" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.reseller" class="Google_Service_Reseller" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.sql_admin" class="Google_Service_SQLAdmin" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.site_verification" class="Google_Service_SiteVerification" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.spectrum" class="Google_Service_Spectrum" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.storage" class="Google_Service_Storage" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.taskqueue" class="Google_Service_Taskqueue" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.tasks" class="Google_Service_Tasks" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.translate" class="Google_Service_Translate" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.urlshortener" class="Google_Service_Urlshortener" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.webfonts" class="Google_Service_Webfonts" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.youtube" class="Google_Service_YouTube" parent="joshuaestes_google.service" />
+        <service id="joshuaestes_google.service.youtube_analytics" class="Google_Service_YouTubeAnalytics" parent="joshuaestes_google.service" />
+    </services>
+</container>
