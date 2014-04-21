@@ -18,9 +18,9 @@
         "wiki": "https://github.com/JoshuaEstes/GoogleBundle/wiki",
         "source": "https://github.com/JoshuaEstes/GoogleBundle"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
-        "google/apiclient": "*"
+        "google/apiclient": "*@dev"
     },
     "require-dev": {
     },
